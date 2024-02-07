@@ -1,55 +1,97 @@
 [
 	{
-		"id": 1,
-		"title": "Producto 1",
-		"description": "Descripción del Producto 1",
-		"code": "P001",
-		"price": 19.99,
-		"status": true,
-		"stock": 50,
-		"category": "Electrónica",
-		"thumbnails": [
-			"ruta1_imagen1.jpg",
-			"ruta1_imagen2.jpg"
-		]
-	},
-	{
 		"id": 2,
-		"title": "Producto 1",
-		"description": "Descripción del Producto act ",
 		"code": "P002",
+		"title": "Producto 2",
+		"description": "Descripción del Producto 2",
 		"price": 19.99,
 		"status": false,
 		"stock": 50,
 		"category": "Electrónica",
 		"thumbnails": [
-			"ruta1_imagen1.jpg",
-			"ruta1_imagen2.jpg"
+			"ruta2_imagen1.jpg",
+			"ruta2_imagen2.jpg"
 		]
 	},
 	{
-		"id": 4,
-		"title": "Producto 4",
-		"description": "Descripción del Producto 4",
-		"code": "P004",
+		"id": 3,
+		"code": "P003",
+		"title": "Producto 3",
+		"description": "Descripción del Producto 3",
 		"price": 49.99,
 		"status": true,
 		"stock": 15,
 		"category": "Deportes",
+		"thumbnails": [
+			"ruta3_imagen1.jpg",
+			"ruta3_imagen2.jpg"
+		]
+	},
+	{
+		"id": 4,
+		"code": "P004",
+		"title": "Producto 4",
+		"description": "Descripción del Producto 4",
+		"price": 89.99,
+		"status": true,
+		"stock": 40,
+		"category": "Libros",
 		"thumbnails": [
 			"ruta4_imagen1.jpg",
 			"ruta4_imagen2.jpg"
 		]
 	},
 	{
+		"id": 5,
+		"code": "P005",
+		"title": "Producto 5",
+		"description": "Descripción del Producto 5",
+		"price": 99.99,
+		"status": true,
+		"stock": 8,
+		"category": "Cocina",
+		"thumbnails": [
+			"ruta5_imagen1.jpg",
+			"ruta5_imagen2.jpg"
+		]
+	},
+	{
+		"id": 6,
+		"code": "P006",
+		"title": "Producto 6",
+		"description": "Descripción del Producto 6",
+		"price": 19.99,
+		"status": false,
+		"stock": 50,
+		"category": "Electrónica",
+		"thumbnails": [
+			"ruta6_imagen1.jpg",
+			"ruta6_imagen2.jpg"
+		]
+	},
+	{
+		"id": 7,
+		"code": "P007",
+		"title": "Producto 7",
+		"description": "Descripción del Producto 7",
+		"price": 79.99,
+		"status": true,
+		"stock": 18,
+		"category": "Tecnología",
+		"thumbnails": [
+			"ruta7_imagen1.jpg",
+			"ruta7_imagen2.jpg"
+		]
+	},
+	{
 		"id": 8,
+		"code": "P008",
 		"title": "Producto 8",
 		"description": "Descripción del Producto 8",
-		"code": "P008",
-		"price": 89.99,
+		"price": 79.99,
 		"status": true,
-		"stock": 40,
-		"category": "Libros",
+		"stock": 18,
+		"category": "Tecnología",
 		"thumbnails": [
 			"ruta8_imagen1.jpg",
 			"ruta8_imagen2.jpg"
@@ -57,13 +99,13 @@
 	},
 	{
 		"id": 9,
+		"code": "P009",
 		"title": "Producto 9",
 		"description": "Descripción del Producto 9",
-		"code": "P009",
-		"price": 99.99,
+		"price": 79.99,
 		"status": true,
-		"stock": 8,
-		"category": "Cocina",
+		"stock": 18,
+		"category": "Tecnología",
 		"thumbnails": [
 			"ruta9_imagen1.jpg",
 			"ruta9_imagen2.jpg"
@@ -71,132 +113,64 @@
 	},
 	{
 		"id": 10,
-		"title": "Producto 1",
-		"description": "Descripción del Producto act ",
 		"code": "P010",
-		"price": 19.99,
-		"status": false,
-		"stock": 50,
-		"category": "Electrónica",
+		"title": "Producto 10",
+		"description": "Descripción del Producto 10",
+		"price": 79.99,
+		"status": true,
+		"stock": 18,
+		"category": "Tecnología",
 		"thumbnails": [
-			"ruta1_imagen1.jpg",
-			"ruta1_imagen2.jpg"
+			"ruta10_imagen1.jpg",
+			"ruta10_imagen2.jpg"
 		]
 	},
 	{
 		"id": 11,
 		"code": "P011",
-		"title": "Nuevo Producto",
-		"description": "Este es un producto completamente nuevo y emocionante.",
+		"title": "Producto 11",
+		"description": "Descripción del Producto 11",
 		"price": 79.99,
+		"status": true,
 		"stock": 18,
 		"category": "Tecnología",
-		"status": true
+		"thumbnails": [
+			"ruta11_imagen1.jpg",
+			"ruta11_imagen2.jpg"
+		]
 	},
 	{
 		"id": 12,
 		"code": "P012",
-		"title": "producto act 11",
-		"description": "Este es un producto completamente actualizado. (actualizar anda bien)",
+		"title": "Producto 12",
+		"description": "Descripción del Producto 12",
 		"price": 79.99,
+		"status": true,
 		"stock": 18,
 		"category": "Tecnología",
-		"status": true
+		"thumbnails": [
+			"ruta12_imagen1.jpg",
+			"ruta12_imagen2.jpg"
+		]
 	},
 	{
 		"id": 13,
 		"code": "P013",
-		"title": "Nuevo Producto",
-		"description": "Este es un producto completamente nuevo y emocionante.",
+		"title": "Producto 13",
+		"description": "Descripción del Producto 13",
 		"price": 79.99,
+		"status": true,
 		"stock": 18,
 		"category": "Tecnología",
-		"status": true
+		"thumbnails": [
+			"ruta13_imagen1.jpg",
+			"ruta13_imagen2.jpg"
+		]
 	},
 	{
 		"id": 14,
 		"code": "P014",
-		"title": "Nuevo Producto",
-		"description": "Este es un producto completamente nuevo y emocionante.",
-		"price": 79.99,
-		"stock": 18,
-		"category": "Tecnología",
-		"status": true
-	},
-	{
-		"id": 31,
-		"code": "P015",
-		"title": "Nuevo Producto",
-		"description": "Este es un producto completamente nuevo y emocionante.",
-		"price": 79.99,
-		"stock": 18,
-		"category": "Tecnología",
-		"status": true
-	},
-	{
-		"id": 32,
-		"code": "P032",
-		"title": "Nuevo Producto",
-		"description": "Este es un producto completamente nuevo y emocionante.",
-		"price": 79.99,
-		"stock": 18,
-		"category": "Tecnología",
-		"status": true
-	},
-	{
-		"id": 33,
-		"code": "P033",
-		"title": "Nuevo Producto",
-		"description": "Este es un producto completamente nuevo y emocionante.",
-		"price": 79.99,
-		"stock": 18,
-		"category": "Tecnología",
-		"status": true
-	},
-	{
-		"id": 34,
-		"code": "P034",
-		"title": "Nuevo Producto",
-		"description": "Este es un producto completamente nuevo y emocionante.",
-		"price": 79.99,
-		"stock": 18,
-		"category": "Tecnología",
-		"status": true
-	},
-	{
-		"id": 35,
-		"code": "P035",
-		"title": "Nuevo Producto",
-		"description": "Este es un producto completamente nuevo y emocionante.",
-		"price": 79.99,
-		"stock": 18,
-		"category": "Tecnología",
-		"status": true
-	},
-	{
-		"id": 36,
-		"code": "P036",
-		"title": "Nuevo Producto",
-		"description": "Este es un producto completamente nuevo y emocionante.",
-		"price": 79.99,
-		"stock": 18,
-		"category": "Tecnología",
-		"status": true
-	},
-	{
-		"id": 37,
-		"code": "P037",
-		"title": "Nuevo Producto",
-		"description": "Este es un producto completamente nuevo y emocionante.",
-		"price": 79.99,
-		"stock": 18,
-		"category": "Tecnología",
-		"status": true
-	},
-	{
-		"id": 38,
-		"code": "P038",
-		"title": "Producto 3",
+		"title": "Producto 1",
 		"description": "Descripción del Producto 1",
 		"price": 19.99,
 		"stock": 50,

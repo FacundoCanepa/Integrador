@@ -1,33 +1,40 @@
 import express from 'express';
-import productsRouter from './routes/products.router.js';
-import cartsRouter from './routes/carts.router.js';
 import handlebars from 'express-handlebars';
-import viewRouter from './routes/views.router.js'
-import { fileURLToPath } from 'url';
-import path, { dirname, join } from 'path';
+import { __dirname } from "./utils.js"
 import { Server } from 'socket.io';
 
-const PORT = 8080;
+import productsRouter from './routes/products.router.js';
+import cartsRouter from './routes/carts.router.js';
+import viewRouter from './routes/views.router.js'
+import socketProduct from './listeners/socketProducts.js';
+
 const app = express();
-
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
-
-app.use('/api/products', productsRouter);
-app.use('/api/carts', cartsRouter);
-app.use('/', viewRouter);
-app.use(express.static(path.join(__dirname,'/public')))
+const PORT = 8080;
 
 
+const publicPath = `${__dirname}/public`;
+app.use(express.static(publicPath));
+
+//handlebars
 app.engine("handlebars" , handlebars.engine())
 app.set("views",__dirname + '/views')
 app.set ('view engine' , "handlebars")
 
+//rutas
+app.use('/api/products', productsRouter);
+app.use('/api/carts', cartsRouter);
+app.use('/', viewRouter);
 
 
-const httpServer = app.listen(PORT, () => 
-    console.log(`Servidor iniciado en http://localhost:${PORT}`)
-);
+const httpServer=app.listen(PORT, () => {
+    try {
+        console.log(`Listening to the port http://localhost:${PORT}`);
+    }
+    catch (err) {
+        console.log(err);
+    }
+});
 
-const socketServer = new Server(httpServer);
+const socketServer = new Server(httpServer)
 
+socketProduct(socketServer)
