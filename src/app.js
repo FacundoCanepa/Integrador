@@ -25,6 +25,7 @@ app.use('/api/products', productsRouter);
 app.use('/api/carts', cartsRouter);
 app.use('/', viewRouter);
 
+app.use(express.static(`${__dirname}/assets`));
 
 const httpServer=app.listen(PORT, () => {
     try {

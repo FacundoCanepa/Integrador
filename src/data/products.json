@@ -1,184 +1,453 @@
 [
-	{
-		"id": 2,
-		"code": "P002",
-		"title": "Producto 2",
-		"description": "Descripción del Producto 2",
-		"price": 19.99,
-		"status": false,
-		"stock": 50,
-		"category": "Electrónica",
-		"thumbnails": [
-			"ruta2_imagen1.jpg",
-			"ruta2_imagen2.jpg"
-		]
-	},
-	{
-		"id": 3,
-		"code": "P003",
-		"title": "Producto 3",
-		"description": "Descripción del Producto 3",
-		"price": 49.99,
-		"status": true,
-		"stock": 15,
-		"category": "Deportes",
-		"thumbnails": [
-			"ruta3_imagen1.jpg",
-			"ruta3_imagen2.jpg"
-		]
-	},
-	{
-		"id": 4,
-		"code": "P004",
-		"title": "Producto 4",
-		"description": "Descripción del Producto 4",
-		"price": 89.99,
-		"status": true,
-		"stock": 40,
-		"category": "Libros",
-		"thumbnails": [
-			"ruta4_imagen1.jpg",
-			"ruta4_imagen2.jpg"
-		]
-	},
-	{
-		"id": 5,
-		"code": "P005",
-		"title": "Producto 5",
-		"description": "Descripción del Producto 5",
-		"price": 99.99,
-		"status": true,
-		"stock": 8,
-		"category": "Cocina",
-		"thumbnails": [
-			"ruta5_imagen1.jpg",
-			"ruta5_imagen2.jpg"
-		]
-	},
-	{
-		"id": 6,
-		"code": "P006",
-		"title": "Producto 6",
-		"description": "Descripción del Producto 6",
-		"price": 19.99,
-		"status": false,
-		"stock": 50,
-		"category": "Electrónica",
-		"thumbnails": [
-			"ruta6_imagen1.jpg",
-			"ruta6_imagen2.jpg"
-		]
-	},
-	{
-		"id": 7,
-		"code": "P007",
-		"title": "Producto 7",
-		"description": "Descripción del Producto 7",
-		"price": 79.99,
-		"status": true,
-		"stock": 18,
-		"category": "Tecnología",
-		"thumbnails": [
-			"ruta7_imagen1.jpg",
-			"ruta7_imagen2.jpg"
-		]
-	},
-	{
-		"id": 8,
-		"code": "P008",
-		"title": "Producto 8",
-		"description": "Descripción del Producto 8",
-		"price": 79.99,
-		"status": true,
-		"stock": 18,
-		"category": "Tecnología",
-		"thumbnails": [
-			"ruta8_imagen1.jpg",
-			"ruta8_imagen2.jpg"
-		]
-	},
-	{
-		"id": 9,
-		"code": "P009",
-		"title": "Producto 9",
-		"description": "Descripción del Producto 9",
-		"price": 79.99,
-		"status": true,
-		"stock": 18,
-		"category": "Tecnología",
-		"thumbnails": [
-			"ruta9_imagen1.jpg",
-			"ruta9_imagen2.jpg"
-		]
-	},
-	{
-		"id": 10,
-		"code": "P010",
-		"title": "Producto 10",
-		"description": "Descripción del Producto 10",
-		"price": 79.99,
-		"status": true,
-		"stock": 18,
-		"category": "Tecnología",
-		"thumbnails": [
-			"ruta10_imagen1.jpg",
-			"ruta10_imagen2.jpg"
-		]
-	},
-	{
-		"id": 11,
-		"code": "P011",
-		"title": "Producto 11",
-		"description": "Descripción del Producto 11",
-		"price": 79.99,
-		"status": true,
-		"stock": 18,
-		"category": "Tecnología",
-		"thumbnails": [
-			"ruta11_imagen1.jpg",
-			"ruta11_imagen2.jpg"
-		]
-	},
-	{
-		"id": 12,
-		"code": "P012",
-		"title": "Producto 12",
-		"description": "Descripción del Producto 12",
-		"price": 79.99,
-		"status": true,
-		"stock": 18,
-		"category": "Tecnología",
-		"thumbnails": [
-			"ruta12_imagen1.jpg",
-			"ruta12_imagen2.jpg"
-		]
-	},
-	{
-		"id": 13,
-		"code": "P013",
-		"title": "Producto 13",
-		"description": "Descripción del Producto 13",
-		"price": 79.99,
-		"status": true,
-		"stock": 18,
-		"category": "Tecnología",
-		"thumbnails": [
-			"ruta13_imagen1.jpg",
-			"ruta13_imagen2.jpg"
-		]
-	},
-	{
-		"id": 14,
-		"code": "P014",
-		"title": "Producto 1",
-		"description": "Descripción del Producto 1",
-		"price": 19.99,
-		"stock": 50,
-		"category": "Electrónica",
-		"thumbnails": [
-			"ruta1_imagen1.jpg",
-			"ruta1_imagen2.jpg"
-		],
-		"status": true
-	}
+  {
+    "id": 1,
+    "code": "RAV001",
+    "title": "Ravioles Verdura",
+    "description": "Deliciosos ravioles de verdura, ideales para una comida reconfortante.",
+    "price": 620,
+    "status": true,
+    "stock": 23,
+    "category": "Ravioles",
+    "thumbnails": ["assets/Ravioles.jpg"]
+  },
+  {
+    "id": 2,
+    "code": "RAV002",
+    "title": "Ravioles (Verdura y Pollo) o (Verdura y Carne)",
+    "description": "Una combinación perfecta de sabores: verdura y pollo o carne en cada bocado.",
+    "price": 650,
+    "status": true,
+    "stock": 17,
+    "category": "Ravioles",
+    "thumbnails": ["assets/Ravioles.jpg"]
+  },
+  {
+    "id": 3,
+    "code": "RAV003",
+    "title": "Ravioles Verdura y Ricota",
+    "description": "Suaves ravioles rellenos de deliciosa ricota y verduras frescas.",
+    "price": 650,
+    "status": true,
+    "stock": 30,
+    "category": "Ravioles",
+    "thumbnails": ["assets/Ravioles.jpg"]
+  },
+  {
+    "id": 4,
+    "code": "RAV004",
+    "title": "Ravioles Ricota",
+    "description": "Clásicos ravioles de ricota, un favorito para toda la familia.",
+    "price": 650,
+    "status": true,
+    "stock": 12,
+    "category": "Ravioles",
+    "thumbnails": ["assets/Ravioles.jpg"]
+  },
+  {
+    "id": 5,
+    "code": "RAV005",
+    "title": "Ravioles Ricota y Jamón",
+    "description": "La combinación perfecta de la suavidad de la ricota y el sabor del jamón.",
+    "price": 680,
+    "status": true,
+    "stock": 25,
+    "category": "Ravioles",
+    "thumbnails": ["assets/Ravioles.jpg"]
+  },
+  {
+    "id": 6,
+    "code": "RAV006",
+    "title": "Ravioles Pollo y Jamón",
+    "description": "Ravioles jugosos rellenos de pollo y jamón, una delicia irresistible.",
+    "price": 700,
+    "status": true,
+    "stock": 18,
+    "category": "Ravioles",
+    "thumbnails": ["assets/Ravioles.jpg"]
+  },
+  {
+    "id": 7,
+    "code": "RAV007",
+    "title": "Ravioles 4 Quesos",
+    "description": "Una explosión de sabores con cuatro tipos de quesos en cada bocado.",
+    "price": 700,
+    "status": true,
+    "stock": 21,
+    "category": "Ravioles",
+    "thumbnails": ["assets/Ravioles.jpg"]
+  },
+  {
+    "id": 8,
+    "code": "RAV008",
+    "title": "Ravioles Verdes de calabaza",
+    "description": "Ravioles con un toque especial de calabaza, una opción única y deliciosa.",
+    "price": 700,
+    "status": true,
+    "stock": 15,
+    "category": "Ravioles",
+    "thumbnails": ["assets/Ravioles.jpg"]
+  },
+  {
+    "id": 9,
+    "code": "FID009",
+    "title": "Fideos Al Huevo (finos, medianos, anchos, gruesos)",
+    "description": "Precio por kg. Rinde 4-5 porciones.",
+    "price": 1200,
+    "status": true,
+    "stock": 40,
+    "category": "Fideos",
+    "thumbnails": ["assets/Fideos.jpg"]
+  },
+  {
+    "id": 10,
+    "code": "FID010",
+    "title": "Fideos Caseros",
+    "description": "Fideos caseros frescos, perfectos para cualquier salsa.",
+    "price": 1400,
+    "status": true,
+    "stock": 28,
+    "category": "Fideos",
+    "thumbnails": ["assets/Fideos.jpg"]
+  },
+  {
+    "id": 11,
+    "code": "FID011",
+    "title": "Fideos Espinaca",
+    "description": "Fideos verdes de espinaca, ideales para agregar color y sabor a tus platos.",
+    "price": 1400,
+    "status": true,
+    "stock": 20,
+    "category": "Fideos",
+    "thumbnails": ["assets/Fideos.jpg"]
+  },
+  {
+    "id": 12,
+    "code": "FID012",
+    "title": "Fideos Morrón",
+    "description": "Fideos con sabor a morrón, una opción deliciosa y llena de color.",
+    "price": 1400,
+    "status": true,
+    "stock": 16,
+    "category": "Fideos",
+    "thumbnails": ["assets/Fideos.jpg"]
+  },
+  {
+    "id": 13,
+    "code": "FID013",
+    "title": "Fideos Fuccile",
+    "description": "Fideos en forma de fuccile, perfectos para atrapar tu salsa favorita.",
+    "price": 1500,
+    "status": true,
+    "stock": 22,
+    "category": "Fideos",
+    "thumbnails": ["assets/Fideos.jpg"]
+  },
+  {
+    "id": 14,
+    "code": "FID014",
+    "title": "Fideos MostacholES",
+    "description": "Fideos mostacholes, clásicos y deliciosos para cualquier ocasión.",
+    "price": 1500,
+    "status": true,
+    "stock": 18,
+    "category": "Fideos",
+    "thumbnails": ["assets/Fideos.jpg"]
+  },
+  {
+    "id": 15,
+    "code": "FID015",
+    "title": "Fideos Macarrón",
+    "description": "Fideos macarrón, un clásico que siempre es bienvenido en la mesa.",
+    "price": 1500,
+    "status": true,
+    "stock": 25,
+    "category": "Fideos",
+    "thumbnails": ["assets/Fideos.jpg"]
+  },
+  {
+    "id": 16,
+    "code": "FID016",
+    "title": "Ñoquis Papa",
+    "description": "Ñoquis de papa, suaves y deliciosos, perfectos para combinar con tu salsa favorita.",
+    "price": 1400,
+    "status": true,
+    "stock": 30,
+    "category": "Fideos",
+    "thumbnails": ["assets/Fideos.jpg"]
+  },
+  {
+    "id": 17,
+    "code": "FID017",
+    "title": "Ñoquis Ricota",
+    "description": "Ñoquis de ricota, una opción más ligera y llena de sabor.",
+    "price": 1400,
+    "status": true,
+    "stock": 20,
+    "category": "Fideos",
+    "thumbnails": ["assets/Fideos.jpg"]
+  },
+  {
+    "id": 18,
+    "code": "FID018",
+    "title": "Ñoquis Espinaca",
+    "description": "Ñoquis de espinaca, una opción saludable y deliciosa para toda la familia.",
+    "price": 1400,
+    "status": true,
+    "stock": 18,
+    "category": "Fideos",
+    "thumbnails": ["assets/Fideos.jpg"]
+  },
+  {
+    "id": 19,
+    "code": "SOR019",
+    "title": "Sorrentinos Jamón y queso; Verdura",
+    "description": "Exquisitos sorrentinos rellenos de jamón y queso o verdura, una opción irresistible.",
+    "price": 2900,
+    "status": true,
+    "stock": 25,
+    "category": "Sorrentinos",
+    "thumbnails": ["assets/Sorrentinos.jpg"]
+  },
+  {
+    "id": 20,
+    "code": "SOR020",
+    "title": "Sorrentinos Ricota, jamón y nuez",
+    "description": "Sorrentinos con un relleno cremoso de ricota, jamón y nuez, una combinación perfecta de sabores.",
+    "price": 2900,
+    "status": true,
+    "stock": 20,
+    "category": "Sorrentinos",
+    "thumbnails": ["assets/Sorrentinos.jpg"]
+  },
+  {
+    "id": 21,
+    "code": "SOR021",
+    "title": "Sorrentinos 4 quesos; calabaza; capresse; pollo y jamón",
+    "description": "Una variedad de sorrentinos con diferentes rellenos para satisfacer todos los gustos.",
+    "price": 3100,
+    "status": true,
+    "stock": 15,
+    "category": "Sorrentinos",
+    "thumbnails": ["assets/Sorrentinos.jpg"]
+  },
+  {
+    "id": 22,
+    "code": "CAN022",
+    "title": "Canelones Verdura y carne; Ricota y Jamón",
+    "description": "Deliciosos canelones rellenos de verdura y carne o ricota y jamón.",
+    "price": 2500,
+    "status": true,
+    "stock": 28,
+    "category": "Canelones",
+    "thumbnails": ["assets/Canelones.jpg"]
+  },
+  {
+    "id": 23,
+    "code": "LAS023",
+    "title": "Lasaña Ricota, Verdura, jamón y queso",
+    "description": "Una lasaña llena de sabores: ricota, verdura, jamón y queso, perfecta para una comida reconfortante.",
+    "price": 2800,
+    "status": true,
+    "stock": 18,
+    "category": "Lasaña",
+    "thumbnails": ["assets/Lasagna.jpg"]
+  },
+  {
+    "id": 24,
+    "code": "PIZ024",
+    "title": "Pizza Mozzarella",
+    "description": "Pizza clásica con abundante queso mozzarella, simplemente irresistible.",
+    "price": 950,
+    "status": true,
+    "stock": 30,
+    "category": "Pizza",
+    "thumbnails": ["assets/Pizza.jpg"]
+  },
+  {
+    "id": 25,
+    "code": "PIZ025",
+    "title": "PIZZA Especial",
+    "description": "Pizza especial con una variedad de ingredientes seleccionados para una explosión de sabor.",
+    "price": 1200,
+    "status": true,
+    "stock": 20,
+    "category": "Pizza",
+    "thumbnails": ["assets/Pizza.jpg"]
+  },
+  {
+    "id": 26,
+    "code": "PIZ026",
+    "title": "Pizza Roquefort",
+    "description": "Pizza con un toque distintivo de queso roquefort, perfecta para los amantes del queso.",
+    "price": 1400,
+    "status": true,
+    "stock": 15,
+    "category": "Pizza",
+    "thumbnails": ["assets/Pizza.jpg"]
+  },
+  {
+    "id": 27,
+    "code": "PIZ027",
+    "title": "Pizza Pre pizza (dos por paquete)",
+    "description": "Paquete de dos bases de pizza listas para añadir tus ingredientes favoritos.",
+    "price": 600,
+    "status": true,
+    "stock": 25,
+    "category": "Pizza",
+    "thumbnails": ["assets/Pizza.jpg"]
+  },
+  {
+    "id": 28,
+    "code": "SAL028",
+    "title": "Salsa Filetto",
+    "description": "Salsa de tomate Filetto, perfecta para acompañar tus platos de pasta.",
+    "price": 700,
+    "status": true,
+    "stock": 30,
+    "category": "Salsas",
+    "thumbnails": ["assets/Salsas.jpg"]
+  },
+  {
+    "id": 29,
+    "code": "SAL029",
+    "title": "Salsa Bolognesa",
+    "description": "Salsa bolognesa casera, llena de sabor y perfecta para tus platos de pasta favoritos.",
+    "price": 800,
+    "status": true,
+    "stock": 20,
+    "category": "Salsas",
+    "thumbnails": ["assets/Salsas.jpg"]
+  },
+  {
+    "id": 30,
+    "code": "SAL030",
+    "title": "Salsa Blanca",
+    "description": "Salsa blanca cremosa, ideal para acompañar tus platos de pasta o gratinados.",
+    "price": 480,
+    "status": true,
+    "stock": 25,
+    "category": "Salsas",
+    "thumbnails": ["assets/Salsas.jpg"]
+  },
+  {
+    "id": 31,
+    "code": "SAL031",
+    "title": "Pesto",
+    "description": "Pesto fresco y aromático, perfecto para darle un toque especial a tus platos.",
+    "price": 500,
+    "status": true,
+    "stock": 15,
+    "category": "Salsas",
+    "thumbnails": ["assets/Salsas.jpg"]
+  },
+  {
+    "id": 32,
+    "code": "QUE032",
+    "title": "Queso sardo rallado",
+    "description": "Queso sardo rallado de alta calidad, perfecto para añadir un toque de sabor a tus platos.",
+    "price": 650,
+    "status": true,
+    "stock": 35,
+    "category": "Quesos",
+    "thumbnails": ["assets/Quesos.jpg"]
+  },
+  {
+    "id": 33,
+    "code": "QUE033",
+    "title": "Queso sardo rallado",
+    "description": "Queso sardo rallado de alta calidad, perfecto para añadir un toque de sabor a tus platos.",
+    "price": 1200,
+    "status": true,
+    "stock": 25,
+    "category": "Quesos",
+    "thumbnails": ["assets/Quesos.jpg"]
+  },
+  {
+    "id": 34,
+    "code": "POS034",
+    "title": "FLAN CASERO",
+    "description": "Delicioso flan casero, presentación en bandeja de aproximadamente 1kg o ½ kilo.",
+    "price": 2700,
+    "status": true,
+    "stock": 20,
+    "category": "Postres",
+    "thumbnails": ["assets/Postres.jpg"]
+  },
+  {
+    "id": 35,
+    "code": "POS035",
+    "title": "BUDIN DE PAN",
+    "description": "Budín de pan casero, presentación en bandeja de aproximadamente 1kg o ½ kilo.",
+    "price": 2700,
+    "status": true,
+    "stock": 15,
+    "category": "Postres",
+    "thumbnails": ["assets/Postres.jpg"]
+  },
+  {
+    "id": 36,
+    "code": "POS036",
+    "title": "CHOCOTORTA",
+    "description": "Chocotorta casera, disponible en tamaño grande o chico.",
+    "price": 1700,
+    "status": true,
+    "stock": 18,
+    "category": "Postres",
+    "thumbnails": ["assets/Postres.jpg"]
+  },
+  {
+    "id": 37,
+    "code": "POS037",
+    "title": "CHEESECAKE FRUTOS ROJO O ARANDANOS",
+    "description": "Cheesecake con frutos rojos o arándanos, una delicia para los amantes del dulce.",
+    "price": 850,
+    "status": true,
+    "stock": 25,
+    "category": "Postres",
+    "thumbnails": ["assets/Postres.jpg"]
+  },
+  {
+    "id": 38,
+    "code": "POS038",
+    "title": "TIRAMISU",
+    "description": "Tiramisú clásico, disponible en tamaño grande o chico.",
+    "price": 1700,
+    "status": true,
+    "stock": 20,
+    "category": "Postres",
+    "thumbnails": ["assets/Postres.jpg"]
+  },
+  {
+    "id": 39,
+    "code": "POS039",
+    "title": "BORRACHITO",
+    "description": "Borrachito clásico, disponible en tamaño grande o chico.",
+    "price": 1700,
+    "status": true,
+    "stock": 15,
+    "category": "Postres",
+    "thumbnails": ["assets/Postres.jpg"]
+  },
+  {
+    "id": 40,
+    "code": "PAS040",
+    "title": "Pastaflora Batata, membrillo, dulce de leche",
+    "description": "Pastaflora casera con rellenos de batata, membrillo o dulce de leche.",
+    "price": 700,
+    "status": true,
+    "stock": 22,
+    "category": "Postres",
+    "thumbnails": ["assets/Postres.jpg"]
+  },
+  {
+    "id": 41,
+    "code": "TAR041",
+    "title": "Tartas Coco, manzana",
+    "description": "Tartas caseras de coco o manzana, perfectas para cualquier ocasión.",
+    "price": 800,
+    "status": true,
+    "stock": 20,
+    "category": "Tartas",
+    "thumbnails": ["assets/Tartas.jpg"]
+  }
 ]
