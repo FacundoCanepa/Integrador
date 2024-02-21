@@ -6,16 +6,6 @@ const router = express.Router();
 router.use(express.json());
 router.use(express.urlencoded({ extended: true }));
 
-router.get('/', async (req, res) => {
-    try {
-        const limit = req.query.limit;
-        const productos = await ProductManager.getInstance().getProducts(limit);
-        res.json({ productos });
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-});
-
 router.get('/:pid', async (req, res) => {
     try {
         const id = parseInt(req.params.pid);

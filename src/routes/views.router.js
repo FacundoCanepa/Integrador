@@ -10,11 +10,14 @@
     router.get('/', async (req, res) => {
         try {
             const productManager = await ProductManager.getInstance().getProducts();
-            res.render("home", { productManager});
+            console.log({productManager})
+            res.render("home", { productManager }); // Pasar los productos a la vista
         } catch (error) {
+            console.error("Error al obtener productos:", error);
             res.status(500).json({ error: error.message });
         }
     });
+    
     
     router.get('/realTimeProducts', async (req, res) => {
         res.render("realTimeProducts" , Socket.id)

@@ -2,6 +2,7 @@ import express from 'express';
 import handlebars from 'express-handlebars';
 import { __dirname } from "./utils.js"
 import { Server } from 'socket.io';
+import mongoose from "mongoose"
 
 import productsRouter from './routes/products.router.js';
 import cartsRouter from './routes/carts.router.js';
@@ -25,8 +26,6 @@ app.use('/api/products', productsRouter);
 app.use('/api/carts', cartsRouter);
 app.use('/', viewRouter);
 
-app.use(express.static(`${__dirname}/assets`));
-
 const httpServer=app.listen(PORT, () => {
     try {
         console.log(`Listening to the port http://localhost:${PORT}`);
@@ -39,3 +38,12 @@ const httpServer=app.listen(PORT, () => {
 const socketServer = new Server(httpServer)
 
 socketProduct(socketServer)
+
+
+mongoose.connect("mongodb+srv://facundocanepach:vlfhpZLBo7Nk4IE3@cluster0.9qtafny.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+    .then(() => {
+        console.log("Conectado a la base de datos" )
+    })
+    .catch(error => {
+        console.error("Error al conectarse a la base de datos", error)
+    })

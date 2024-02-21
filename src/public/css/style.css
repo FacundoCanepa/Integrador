@@ -1,0 +1,96 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button, input[type="submit"] {
+    cursor: pointer;
+}
+
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+
+}
+header{
+    text-align: center;
+    background-color: rgba(0, 255, 255, 0.11);
+    height: 5rem;
+    padding-top: 1rem;
+}
+.listHome img {
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+}
+.listHome ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around ;
+    
+}
+.liHome {
+    width: 40rem;
+    height: 40rem;
+    text-align: center;
+    margin-top: 2rem;
+    background-color: #0000005d;
+    padding-top: 1rem;
+}
+.liHome h2{
+    font-weight: 900;
+    font-size: 2.3rem;
+}
+.MainRealtime {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.formDiv {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    
+}
+.formDiv input {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    width: 30rem;
+    height: 2rem;
+}
+.formDiv button {
+    width: 30rem;
+    height: 2rem;
+}
