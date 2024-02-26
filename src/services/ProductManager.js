@@ -35,6 +35,12 @@ export class ProductManager {
 
     async addProduct(newProduct) {
         try {
+            newProduct.code = await generateUniqueCode();
+
+            newProduct.id = generateUniqueId();
+
+            newProduct.status = true;
+            
             const producto = await productModel.create(newProduct);
             return producto;
         } catch (error) {
@@ -69,3 +75,18 @@ export class ProductManager {
         }
     }
 }
+
+    function generateUniqueId() {
+        const timestamp = Date.now().toString(36);
+        const randomString = Math.random().toString(36).substr(2, 5);
+        const uniqueId = timestamp + '-' + randomString;
+        return uniqueId;
+    }
+        function generateUniqueCode() {
+        let code = '';
+        while (code.length < 9) {
+            code += Math.floor(Math.random() * 10);
+        }
+        return code;
+    }
+    
