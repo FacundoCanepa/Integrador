@@ -68,14 +68,13 @@ editProductForm.addEventListener("submit", async (event) => {
 
     const updatedProduct = {};
 
-
     if (title.trim() !== '') updatedProduct.title = title;
     if (description.trim() !== '') updatedProduct.description = description;
     if (price.trim() !== '') updatedProduct.price = price;
     if (stock.trim() !== '') updatedProduct.stock = stock;
     if (category.trim() !== '') updatedProduct.category = category;
     if (thumbnails.trim() !== '') updatedProduct.thumbnails = thumbnails;
-    
+
     updatedProduct.status = true;
 
     socketClient.emit("updateProduct", { id: productId, updatedFields: updatedProduct });

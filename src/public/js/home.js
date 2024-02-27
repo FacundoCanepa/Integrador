@@ -13,7 +13,7 @@ socketClient.on("enviosdeproductos", (productos) => {
                 <p>Descripción: ${producto.description}</p>
                 <p>Precio: ${producto.price}</p>
                 <p>Stock: ${producto.stock}</p>
-                <img src="${producto.thumbnails}">
+                <img src="${producto.thumbnails}">'
             `;
             productList.appendChild(listItem);
         });
