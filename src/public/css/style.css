@@ -21,7 +21,7 @@ p {
 }
 
 a {
-    color: #007bff;
+    color: #000000;
     text-decoration: none;
 }
 
@@ -48,7 +48,13 @@ header{
     background-color: rgba(0, 255, 255, 0.11);
     height: 5rem;
     padding-top: 1rem;
+
 }
+header div {
+    display: flex;
+    justify-content: space-around ; 
+}
+
 .listHome img {
     width: 15rem;
     height: 15rem;

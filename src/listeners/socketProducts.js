@@ -33,6 +33,17 @@ const socketProduct = async (socketServer) => {
                 socket.emit("deleteProductError", error.message); 
             }
         });
+
+        socket.on("updateProduct", async (updatedProductData) => {
+            try {
+                const { id, updatedFields } = updatedProductData;
+                await productManager.updateProduct(id, updatedFields);
+                const listaProduct = await productManager.getProducts(); 
+                socketServer.emit("enviosdeproductos", listaProduct); 
+            } catch (error) {
+                console.error(error);
+            }
+        });
     });
 };
 

@@ -1,15 +1,7 @@
 <div class="listHome">
-    <ul>
-        {{#each productManager}}
-        <li class="liHome">
-            <h2>{{this.title}}</h2>
-            <p>ID: {{this.id}}</p>
-            <p>DESCRIPTION: {{this.description}}</p>
-            <p>Precio: {{this.price}}</p>
-            <p>Category: {{this.category}}</p>
-            <p>Stock: {{this.stock}}</p>
-            <img src="{{thumbnails.[0]}}" alt="">
-        </li>
-        {{/each}}
-    </ul> 
+    <ul id="productList"></ul>
 </div>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/home.js"></script>

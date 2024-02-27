@@ -26,7 +26,7 @@ router.post('/', async (req, res) => {
 });
 router.put('/:pid', async (req, res) => {
     try {
-        const id = parseInt(req.params.pid);
+        const id = req.params.pid;
         let updatedProduct = req.body;
         updatedProduct = await ProductManager.getInstance().updateProduct(id, updatedProduct);
         res.json({ updatedProduct });
@@ -37,7 +37,7 @@ router.put('/:pid', async (req, res) => {
 
 router.delete('/:pid', async (req, res) => {
     try {
-        const id = parseInt(req.params.pid);
+        const id = req.params.pid;
         if (isNaN(id) || id <= 0) {
             return res.status(400).json({ error: 'ID inválido' });
         }

@@ -50,23 +50,21 @@ export class ProductManager {
     
     async updateProduct(id, updatedFields) {
         try {
-            const productoActualizado = await productModel.findOneAndUpdate(
-                { id: id },
-                updatedFields,
-                { new: true }
+            const updatedProduct = await productModel.findOneAndUpdate(
+                { _id: id }, // Buscar por el _id de MongoDB
+                { $set: updatedFields }, // Actualizar los campos especificados
+                { new: true } // Devolver el producto actualizado
             );
-            if (!productoActualizado) {
-                throw new Error(`No se encontró el producto con id ${id}.`);
-            }
-            return productoActualizado;
+            return updatedProduct;
         } catch (error) {
             throw error;
         }
     }
+    
 
     async deleteProduct(id) {
         try {
-            const productoEliminado = await productModel.findOneAndDelete({ id: id });
+            const productoEliminado = await productModel.findOneAndDelete({ _id: id });
             if (!productoEliminado) {
                 throw new Error(`No se encontró el producto con id ${id}.`);
             }
