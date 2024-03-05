@@ -1,14 +1,28 @@
 import express from 'express';
 import { ProductManager } from '../services/ProductManager.js';
+import productModel from '../model/products.model.js';
+
 
 const router = express.Router();
 
 router.use(express.json());
 router.use(express.urlencoded({ extended: true }));
 
+router.get('/', async(req,res)=>{
+    try{
+        const sort = { price: 'asc' };
+        const limit = req.query.limit || 10 ;
+        const page = req.query.page || 1 ;
+        const product = await productModel.paginate({},{limit , page , sort });
+        res.json(product);
+    }
+    catch (error) { 
+        res.status(500).json({ error: error.message });
+    }
+})
 router.get('/:pid', async (req, res) => {
     try {
-        const id = parseInt(req.params.pid);
+        const id = req.params.pid;
         const producto = await ProductManager.getInstance().getProductById(id);
         res.json({ producto });
     } catch (error) {

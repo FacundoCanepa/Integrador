@@ -23,7 +23,7 @@ export class ProductManager {
 
     async getProductById(id) {
         try {
-            const producto = await productModel.findOne({ id: id });
+            const producto = await productModel.findOne({ _id: id });
             if (!producto) {
                 throw new Error(`El producto con id ${id} no fue encontrado.`);
             }
@@ -37,8 +37,6 @@ export class ProductManager {
         try {
             newProduct.code = await generateUniqueCode();
 
-            newProduct.id = generateUniqueId();
-
             newProduct.status = true;
             
             const producto = await productModel.create(newProduct);
@@ -51,9 +49,9 @@ export class ProductManager {
     async updateProduct(id, updatedFields) {
         try {
             const updatedProduct = await productModel.findOneAndUpdate(
-                { _id: id }, // Buscar por el _id de MongoDB
-                { $set: updatedFields }, // Actualizar los campos especificados
-                { new: true } // Devolver el producto actualizado
+                { _id: id }, 
+                { $set: updatedFields }, 
+                { new: true } 
             );
             return updatedProduct;
         } catch (error) {
@@ -72,9 +70,7 @@ export class ProductManager {
         }
     }
 }
-
-
-   
+  
         function generateUniqueCode() {
         let code = '';
         while (code.length < 9) {

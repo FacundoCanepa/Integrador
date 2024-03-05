@@ -1,7 +1,7 @@
     import express from 'express';
-    import { ProductManager } from '../services/ProductManager.js';
     import { Socket } from 'socket.io';
-import productModel from '../model/products.model.js';
+    import productModel from '../model/products.model.js';
+    import cartsModel from '../model/carts.model.js';
 
     const router = express.Router();
     
@@ -10,22 +10,11 @@ import productModel from '../model/products.model.js';
 
     router.get('/', async (req, res) => {
         try {
-            let { limit = 10, page = 1, sort, query } = req.query;
-            limit = parseInt(limit);
-            page = parseInt(page);
-    
-            let options = {
-                limit,
-                page,
-                sort: sort ? { price: sort === 'asc' ? 1 : -1 } : undefined
-            };
-    
-            let filter = query ? { category: query } : {};
-    
-            const productManager = await productModel.paginate();
+            const sort = { price: 'asc' };
+            const limit = req.query.limit || 10 ;
+            const page = req.query.page || 1 ;
+            const productManager = await productModel.paginate({},{limit , page , sort });
             
-            console.log(productManager)
-
             res.render("home", { productManager });
 
         } catch (error) {
@@ -38,5 +27,27 @@ import productModel from '../model/products.model.js';
     router.get('/realTimeProducts', async (req, res) => {
         res.render("realTimeProducts" , Socket.id)
     });
-    
+        
+    router.get('/products', async (req, res) => {
+        const sort = { price: 'asc' };
+        const limit = req.query.limit || 10 ;
+        const page = req.query.page || 1 ;
+        const productManager = await productModel.paginate({},{limit , page , sort });
+        res.render("products" , { productManager })
+    });
+           
+    router.get('/carts/:id', async (req, res) => {
+        try {
+            const cartId = req.params.id;
+            const cart = await cartsModel.findById(cartId).populate('productos.productoid');
+
+            console.log(cart)
+            
+            res.render('carts', { cart });
+        } catch (error) {
+            console.error('Error al obtener el carts:', error);
+            res.status(500).json({ error: error.message });
+        }
+    });
+
     export default router;

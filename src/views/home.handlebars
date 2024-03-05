@@ -12,13 +12,10 @@
         {{/each}}
     </ul>
 </div>
-
-{{#if productManager.hasNextPage}}
-  <a href="/?page={{productManager.nextPage}}">Siguiente</a>
-{{/if}}
-{{#if productManager.hasPrevPage}}
+<div>
   <a href="/?page={{productManager.prevPage}}">Anterior</a>
-{{/if}}
+  <a href="/?page={{productManager.nextPage}}">Siguiente</a>
+</div>
 
-<script src="/socket.io/socket.io.js"></script>
-<script src="/js/home.js"></script>
+
+

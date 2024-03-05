@@ -1,11 +1,15 @@
+import productModel from "../model/products.model.js";
+import { CartManager } from "../services/CartManager.js";
 import { ProductManager } from "../services/ProductManager.js";
 
 const socketProduct = async (socketServer) => {
 
     socketServer.on("connection", async (socket) => {
         const productManager = ProductManager.getInstance();
+        const carrito =  CartManager.getInstance() ;
 
-        const listaProduct = await productManager.getProducts();
+        const listaProduct = await productModel.find();
+
         console.log("Usuario conectado", socket.id);
 
         socket.emit("enviosdeproductos", listaProduct);
@@ -44,6 +48,22 @@ const socketProduct = async (socketServer) => {
                 console.error(error);
             }
         });
+
+socket.on("addProductCart", async (productId , quantityValue) => {
+    try {
+        const cartId = "65e6a26628825dadd0e64b0c";
+        
+        const quantity = quantityValue
+
+        const cart = await carrito.addProductCart(cartId, productId, quantity);
+        
+        console.log(`Producto agregado al carrito. ID del carrito: ${cart._id}`);
+    } catch (error) {
+        console.error("Error al agregar el producto al carrito:", error.message);
+    }
+});
+
+        
     });
 };
 

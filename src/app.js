@@ -17,7 +17,7 @@ const publicPath = `${__dirname}/public`;
 app.use(express.static(publicPath));
 
 //handlebars
-app.engine("handlebars" , handlebars.engine())
+app.engine("handlebars" , handlebars.engine({runtimeOptions:{allowProtoPropertiesByDefault: true}}))
 app.set("views",__dirname + '/views')
 app.set ('view engine' , "handlebars")
 

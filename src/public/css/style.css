@@ -100,3 +100,12 @@ header div {
     width: 30rem;
     height: 2rem;
 }
+.Btn-addproduct{
+    width: 15rem;
+    height: 2rem;
+}
+
+.h1-center{
+    display: flex;
+    justify-content: center;
+}

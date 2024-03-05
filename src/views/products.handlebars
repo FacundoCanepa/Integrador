@@ -1,0 +1,24 @@
+<div class="listHome" id="addproduct" >
+    <ul>
+        {{#each productManager.docs}}
+        <li class="liHome">
+            <h3>{{this.title}}</h3>
+            <p>ID: {{this._id}}</p>
+            <p>Descripción: {{this.description}}</p>
+            <p>Precio: ${{this.price}}</p>
+            <p>Stock: {{this.stock}}</p>
+            <img src="{{this.thumbnails}}" alt="{{this.title}}">
+            <p><input id="quantity" type="number" class="quantity-input" min="1" value="1"></p>
+            <p ><button class="Btn-addproduct"  data-productId="{{_id}}">Agregar</button></p>
+            
+        </li>
+        {{/each}}
+    </ul>
+</div>
+<div>
+  <a href="/products/?page={{productManager.prevPage}}">Anterior</a>
+  <a href="/products/?page={{productManager.nextPage}}">Siguiente</a>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/products.js"></script>
