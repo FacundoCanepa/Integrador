@@ -40,8 +40,6 @@
         try {
             const cartId = req.params.id;
             const cart = await cartsModel.findById(cartId).populate('productos.productoid');
-
-            console.log(cart)
             
             res.render('carts', { cart });
         } catch (error) {
