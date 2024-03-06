@@ -8,7 +8,25 @@
     router.use(express.json());
     router.use(express.urlencoded({ extended: true }));
 
+    
     router.get('/', async (req, res) => {
+        try {  
+            res.render("Login");
+        } catch (error) {
+            console.error("Error al obtener productos:", error);
+            res.status(500).json({ error: error.message });
+        }
+    });
+    router.get("/profile", (req, res) => {
+        if (!req.session.user) {
+          return res.redirect("/login");
+        }
+      
+        const { first_name, last_name, email, age } = req.session.user;
+        res.render("profile", { first_name, last_name, email, age });
+      });
+      
+    router.get('/home', async (req, res) => {
         try {
             const sort = { price: 'asc' };
             const limit = req.query.limit || 10 ;

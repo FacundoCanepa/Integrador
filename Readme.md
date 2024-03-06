@@ -241,3 +241,69 @@
 </div>
 
 ###
+
+<h2 align="center">Implementacion de login</h2>
+
+###
+
+<h3 align="left">Metodo Post</h3>
+
+###
+
+<div align="center">
+  <img height="550" src="https://i.postimg.cc/Hs8140Gn/postuser.png"  />
+</div>
+
+###
+
+<p align="left">POST /api/user/register<br>Descripción<br>Este endpoint se utiliza para crear un nuevo usuario en la base de datos MongoDB. Al realizar una solicitud POST a esta ruta y proporcionar los datos del usuario en el cuerpo de la solicitud, se crea un nuevo usuario con los detalles especificados.</p>
+
+###
+
+<div align="center">
+  <img height="300" src="https://i.postimg.cc/pdW2Z9YS/Postlogin.png"  />
+</div>
+
+###
+
+<p align="left">POST /api/user/login<br>Este endpoint se utiliza para iniciar sesión en el sistema. Al realizar una solicitud POST a esta ruta y proporcionar las credenciales de inicio de sesión (correo electrónico y contraseña) en el cuerpo de la solicitud, el usuario correspondiente será autenticado en el sistema.</p>
+
+###
+
+<h3 align="left">View login</h3>
+
+###
+
+<p align="left">al entrar http://localhost:8080/ tenes que hacer un form para poder hacer el login (el header va a ser eliminado en un futuro ) :</p>
+
+###
+
+<div align="center">
+  <img height="150" src="https://i.postimg.cc/J4zvPb9Z/Viewlogin1.png"  />
+</div>
+
+###
+
+<p align="left">Tengo el problema que al poner el email y password , este me lleva a http://localhost:8080/api/session/login , mientras en el codigo le estoy dando res.redirect("/profile") :</p>
+
+###
+
+<div align="center">
+  <img height="200" src="https://i.postimg.cc/Gty8CBfQ/codeform.png"  />
+</div>
+
+###
+
+<p align="left">Form de http://localhost:8080/</p>
+
+###
+
+<div align="center">
+  <img height="500" src="https://i.postimg.cc/wBR1CfGN/POstlogincode.png"  />
+</div>
+
+###
+
+<p align="left"></p>
+
+###
