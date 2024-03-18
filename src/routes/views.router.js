@@ -21,8 +21,8 @@
         if (!req.session.user) {
           return res.redirect("/login");
         }
-      
         const { first_name, last_name, email, age } = req.session.user;
+
         res.render("profile", { first_name, last_name, email, age });
       });
       
@@ -65,5 +65,16 @@
             res.status(500).json({ error: error.message });
         }
     });
+
+    router.get('/register', async (req, res) => {
+        try {
+            
+            res.render('register' );
+        } catch (error) {
+            console.error('Error :', error);
+            res.status(500).json({ error: error.message });
+        }
+    });
+
 
     export default router;

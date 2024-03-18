@@ -6,12 +6,16 @@ import { connect } from 'mongoose';
 import session from "express-session";
 import cookieParser from "cookie-parser";
 import MongoStore from "connect-mongo";
+import passport, { Passport } from 'passport';
 
 import productsRouter from './routes/products.router.js';
 import cartsRouter from './routes/carts.router.js';
 import viewRouter from './routes/views.router.js'
 import socketProduct from './listeners/socketProducts.js';
 import userRouter from './routes/user.router.js'
+import initializePassport from './config/passport.config.js'
+
+
 const app = express();
 const PORT = 8080;
 
@@ -42,6 +46,10 @@ app.use(
         saveUninitialized: true,
     })
 );
+
+app.use(passport.initialize())
+app.use(passport.session())
+initializePassport()
 
 const httpServer = app.listen(PORT, () => {
     try {

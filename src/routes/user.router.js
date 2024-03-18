@@ -1,49 +1,46 @@
 import express from "express";
-import userModel from "../model/user.model.js";
+import passport from "passport";
+import { Strategy as LocalStrategy } from "passport-local";
 
 const router = express.Router();
 
 router.use(express.json());
 router.use(express.urlencoded({ extended: true }));
 
-router.post("/register", async (req, res) => {
-  try {
-    const { first_name, last_name, email, age, password, role } = req.body;
-
-    const user = await userModel.create({
-      first_name,
-      last_name,
-      email,
-      age,
-      password,
-      role,
-    });
-
-    res.redirect("/login");
-    
-  } catch (error) {
-    res.status(500).send(`Error de registro. ${error}`);
-  }
+router.post('/register', passport.authenticate('register', { failureRedirect: '/failregister' }), async (req, res) => {
+  res.send({ status: "success", message: "usuario registrado" });
 });
 
-router.post("/login", async (req, res) => {
-    try {
-      const { email, password } = req.body;
-      console.log(email, password);
-  
-      const user = await userModel.findOne({ email, password });
-      console.log("user =", user);
+router.get('/failregister', async (req, res) => {
+  console.log('Registro fallido');
+  res.status(400).send({ error: "failed" });
+});
+
+
+passport.use('login', new LocalStrategy({ usernameField: 'email' }, async (username, password, done) => {
+  try {
+      const user = await User.findOne({ email: username });
       if (!user) {
-        return res
-          .status(401)
-          .send({ status: "error", error: "Usuario o contraseña incorrecto" });
+          console.log('Usuario no existe');
+          return done(null, false, { message: 'Usuario no encontrado' });
       }
-  
-      res.redirect("/profile");
-    } catch (error) {
-      res.status(500).send(`Error de inicio de sesión. ${error}`);
-    }
-  });
-  
+      if (!isValidatePassword(user, password)) {
+          console.log('Contraseña incorrecta');
+          return done(null, false, { message: 'Contraseña incorrecta' });
+      }
+      console.log('Inicio de sesión exitoso');
+      return done(null, user);
+  } catch (error) {
+      console.log('Error al intentar iniciar sesión:', error);
+      return done(error);
+  }
+}));
+
+router.get("/github", passport.authenticate('github', { scope: ['user:email'] }));
+
+router.get("/githubcallback", passport.authenticate('github', { failureRedirect: '/login' }), async (req, res) => {
+    req.session.user = req.user
+    res.send('You are logged in successfully with Github!')
+})
 
 export default router;
