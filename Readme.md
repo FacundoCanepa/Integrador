@@ -307,3 +307,37 @@
 <p align="left"></p>
 
 ###
+
+<h2 align="left">Refactor a nuestro login</h2>
+
+###
+
+<p align="left">se agrego un hasheo de contraseña</p>
+
+###
+
+<p align="left">implementación de passport</p>
+
+###
+
+<div align="center">
+  <img height="900" src="https://i.postimg.cc/8CxKQgBW/Screenshot-6.png"  />
+</div>
+
+###
+
+<p align="left">autenticación de GitHub</p>
+
+###
+
+<div align="center">
+  <img height="200" src="https://i.postimg.cc/430Mf9ZY/Screenshot-5.png"  />
+</div>
+
+###
+
+<div align="center">
+  <img height="" src="https://i.postimg.cc/kg4f2gTK/Screenshot-7.png"  />
+</div>
+
+###
